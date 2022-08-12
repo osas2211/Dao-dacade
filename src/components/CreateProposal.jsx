@@ -7,7 +7,7 @@ export const Proposal = () => {
   const [name, setName] = React.useState("")
   const [sendTo, setSendTo] = React.useState("")
   return (
-    <div id="proposals" className="option">
+    <div id="create-proposal" className="option">
       <p className="title">Create Proposal. _04</p>
       <Input
         name={"Name"}

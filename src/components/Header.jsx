@@ -35,8 +35,12 @@ export const Header = () => {
                   <Button href="#transfer" xs={6} className="options-nav">
                     transfer shares
                   </Button>
-                  <Button href="#proposals" xs={6} className="options-nav">
-                    proposals
+                  <Button
+                    href="#create-proposal"
+                    xs={6}
+                    className="options-nav"
+                  >
+                    Create proposal
                   </Button>
                 </Grid>
               </Grid>
@@ -81,7 +85,8 @@ export const Header = () => {
           <Button href="#contribute">Contribute</Button>
           <Button href="#redeem">redeem shares</Button>
           <Button href="#transfer">transfer shares</Button>
-          <Button href="#proposals">proposals</Button>
+          <Button href="#create-proposal">create proposal</Button>
+          <Button href="#proposals">Proposals</Button>
           <Button startIcon={<Logout />} variant={"contained"}>
             disconnect
           </Button>

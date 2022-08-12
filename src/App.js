@@ -7,7 +7,8 @@ import { Box } from "@mui/material"
 import { ThemeProvider } from "@mui/material"
 import { createTheme } from "@mui/material/styles"
 import { Transfer } from "./components/Transfer"
-import { Proposal } from "./components/Proposal"
+import { Proposal } from "./components/CreateProposal"
+import Proposals from "./components/Proposals"
 
 function App() {
   const theme = createTheme({
@@ -47,6 +48,7 @@ function App() {
           >
             <Proposal />
           </Box>
+          <Proposals />
         </Container>
       </div>
     </ThemeProvider>
