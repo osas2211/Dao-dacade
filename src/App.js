@@ -1,25 +1,56 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css"
+import { Contribute } from "./components/Contribute"
+import { Redeem } from "./components/Redeem"
+import { Header } from "./components/Header"
+import { Container } from "@mui/system"
+import { Box } from "@mui/material"
+import { ThemeProvider } from "@mui/material"
+import { createTheme } from "@mui/material/styles"
+import { Transfer } from "./components/Transfer"
+import { Proposal } from "./components/Proposal"
 
 function App() {
+  const theme = createTheme({
+    palette: {
+      primary: {
+        light: "#fcbd7a",
+        main: "#f1a14b",
+        dark: "#fdb261d8",
+        contrastText: "#fff",
+      },
+    },
+  })
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <ThemeProvider theme={theme}>
+      <div className="app">
+        <Header />
+        <Container>
+          <Contribute />
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "flex-end",
+              justifyContent: "flex-end",
+            }}
+          >
+            <Redeem />
+          </Box>
+          <Transfer />
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "flex-end",
+              justifyContent: "flex-end",
+            }}
+          >
+            <Proposal />
+          </Box>
+        </Container>
+      </div>
+    </ThemeProvider>
+  )
 }
 
-export default App;
+export default App
